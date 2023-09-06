@@ -10,6 +10,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'w3-css/w3.css';
 import { useEffect, useState } from "react";
+import { Button, ButtonGroup, Box, Grid, GridItem, Hide, Show } from "@chakra-ui/react";
 
 
 
@@ -17,45 +18,37 @@ const App = () => {
 
 
   return (
-  <>
-   
+    <>
+      <Container>
 
-
-<Container>
-      <Row >
-        <Container>
-          <Col className="image-container"style={{backgroundColor: '#5A585B'}} >
-          <LogoImage/> 
-          </Col>
+        <Row >
+          <Container>
+            <Col className="image-container" style={{ backgroundColor: '#5A585B' }} >
+              <LogoImage />
+            </Col>
           </Container>
-        
-      </Row>
-      <Row>
-        <Col> <NavBar/></Col>
-      </Row>
-      <Row>
-        <Col xs={4}><SideBar/></Col>
-        <Col xs={8}>
-          <Container className="page-container"><Home/></Container></Col>
-        
-      </Row>
-      <Row>
-        
-      <Col xs={4}></Col>
-        <Col className="bottomFooter"><BottomFooter/></Col>
-       
-      </Row>
-    </Container>
+        </Row>
 
+        <Row>
+          <Col> <NavBar /></Col>
+        </Row>
 
+        <Row>
+          <Col className="SideBar" xs={4} >
+            
+              <SideBar />
+           
+          </Col>
+          <Col className="pageCol" >
+            <Container className="page-container"><Home /></Container></Col>
+        </Row>
 
-    
-   
-   
-    
-
-    
-  </>
+        <Row>
+          <Col xs={4}></Col>
+          <Col className="bottomFooter"><BottomFooter /></Col>
+        </Row>
+      </Container>
+    </>
   )
 }
 

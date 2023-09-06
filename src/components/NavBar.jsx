@@ -6,8 +6,8 @@ const NavBar = () => {
     <>
       <Navbar  bg='primary' data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
+        
+          <Nav className='navbar navbar-dark me-auto'>
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Managed IT Services</Nav.Link>
             <Nav.Link href="#pricing">Hosting Services</Nav.Link>

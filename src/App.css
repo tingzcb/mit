@@ -1,16 +1,23 @@
 :root {
     --bg-body: #fdfdfd;
-    --bg-main: #141529;
+    --bg-main: #2577d5;
     --bg-second: #79788c;
-    --bg-hover: #323048;
+    --bg-hover: #58b9bd;
     --bg-text: #f8fbff;
 }
 
-@media (max-width: 700px) {
-    .SideBar {
-      display: none;
-    }
+
+@media only screen and (max-width: 750px) {
+  .SideBar{
+     display: none;
   }
+
+  .pageCol{
+   margin-left: 5%;
+  
+  }
+
+}
 
 
 * {

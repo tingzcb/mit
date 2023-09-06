@@ -4,7 +4,7 @@ const SideBar = () => {
   return (
     <>
    
-    <ul class="nav w3-sidebar w3-bar-block" >
+    <ul class="nav w3-sidebar w3-bar-block " >
         <li>
             <a href="#">
                 Dashboard
