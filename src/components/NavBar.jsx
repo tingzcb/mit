@@ -1,20 +1,28 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import {NavLink, Outlet } from 'react-router-dom';
+import SideBar from './SideBar';
 const NavBar = () => {
   return (
     <>
-      <Navbar  bg='primary' data-bs-theme="dark">
-        <Container>
+      <header>
+        <Navbar  bg='primary' data-bs-theme="dark">
+          <Container>
         
-          <Nav className='navbar navbar-dark me-auto'>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Managed IT Services</Nav.Link>
-            <Nav.Link href="#pricing">Hosting Services</Nav.Link>
-            <Nav.Link href="#pricing">Contact US</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+            <nav className='navbar navbar-dark me-auto'>
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="managedItServices">Managed IT Services</NavLink>
+              <NavLink to="hostingServices">Hosting Services</NavLink>
+              <NavLink to="contactUs">Contact US</NavLink>
+            </nav>
+          </Container>
+        </Navbar>
+      </header>
+      <main>
+ 
+      </main>
+
       
     </>
   )

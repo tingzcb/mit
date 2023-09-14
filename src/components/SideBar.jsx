@@ -1,75 +1,71 @@
+import { NavLink } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 
 
 const SideBar = () => {
-  return (
-    <>
-   
-    <ul class="nav w3-sidebar w3-bar-block " >
-        <li>
-            <a href="#">
-                Dashboard
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Home
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Pages
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Products
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Categories
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Users
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Stocks
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Orders
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Menu Item
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Menu Item
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Menu Item
-            </a>
-        </li>
-        <button class="nav-toggle" id="nav-toggle">X</button>
+    return (
+        <>
+            <ul class="nav   w3-sidebar  w3-collapse " >
+                <li>
+                    <NavLink to="/">
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="managedItServices">
+                        MANAGED IT SERVICES
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="pcMacSupport">
+                        PC & Mac Support
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='serverNetwork'>
+                        Server & Network
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='backUp'>
+                        Backup & Disaster Recovery
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='software' >
+                        Software Implementation
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='hosting'>
+                        Hosting Services
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='websiteDesign'>
+                        Website Design
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='emailHosting'>
+                        Website & Email Hosting
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='partner' >
+                        IT Partner
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='testimonial'>
+                        Testimonials
+                    </NavLink>
+                </li>
+                <button class="nav-toggle" id="nav-toggle">X</button>
+            </ul>
 
-      
-    </ul>
-  
- 
-
-
-</>
-  )
+        
+        </>
+    )
 }
 
 export default SideBar

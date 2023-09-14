@@ -1,54 +1,71 @@
-import NavBar from "./components/NavBar";
-import 'bootstrap/dist/css/bootstrap.css';
-import LogoImage from "./components/logoImage";
+
+ import 'bootstrap/dist/css/bootstrap.css';
+
 import Home from "./pages/home/Home";
-import BottomFooter from "./components/BottomFooter";
+import LogoImage from "./components/logoImage";
+import NavBar from "./components/NavBar";
+// import BottomFooter from ".components/BottomFooter";
 import SideBar from "./components/SideBar";
+// import Home from "./pages/home/Home";
 import './app.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+
 import 'w3-css/w3.css';
-import { useEffect, useState } from "react";
 import { Button, ButtonGroup, Box, Grid, GridItem, Hide, Show } from "@chakra-ui/react";
 
+//router
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider
+} from "react-router-dom";
+import ManagedItServices from "./pages/manageItServices/ManagedItServices";
+import RootLayout from "./layouts/RootLayout";
+import HostingServices from './pages/hostingServices/HostingServices';
+import ContactUs from './pages/contactUs/ContactUs';
+import PcMacSupport from "./pages/pcMacSupport/PcMacSupport";
+import ServerNetwork from "./pages/serverNetwork/ServerNetwork";
+import BackUp from "./pages/backupDisasterRecovery/BackUp";
+import Software from "./pages/softwareImplementation/Software";
+import WebsiteDesign from "./pages/websiteDesign/WebsiteDesign";
+import EmailHosting from "./pages/websiteEmailHosting/EmailHosting";
+import ITpartner from "./pages/itPartner/ITpartner";
+import Testimonials from "./pages/Testimonials";
+
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />} >
+      <Route index element={<Home />} />
+      <Route path="managedItServices" element={<ManagedItServices />} />
+      <Route path="hostingServices" element={<HostingServices />} />
+      <Route path="contactUs" element={<ContactUs />} />
+
+      <Route path="pcMacSupport" element={<PcMacSupport />} />
+      <Route path="serverNetwork" element={<ServerNetwork />} />
+      <Route path="backUp" element={<BackUp />} />
+      <Route path="Software" element={<Software />} />
+      <Route path="hosting" element={<HostingServices />} />
+      <Route path="websiteDesign" element={<WebsiteDesign />} />
+      <Route path="emailHosting" element={<EmailHosting />} />
+      <Route path="partner" element={<ITpartner />} />
+      <Route path="testimonial" element={<Testimonials />} />
+
+
+    </Route>
+
+
+  )
+)
 
 
 const App = () => {
 
 
   return (
-    <>
-      <Container>
+    <RouterProvider router={router} />
 
-        <Row >
-          <Container>
-            <Col className="image-container" style={{ backgroundColor: '#5A585B' }} >
-              <LogoImage />
-            </Col>
-          </Container>
-        </Row>
-
-        <Row>
-          <Col> <NavBar /></Col>
-        </Row>
-
-        <Row>
-          <Col className="SideBar" xs={4} >
-            
-              <SideBar />
-           
-          </Col>
-          <Col className="pageCol" >
-            <Container className="page-container"><Home /></Container></Col>
-        </Row>
-
-        <Row>
-          <Col xs={4}></Col>
-          <Col className="bottomFooter"><BottomFooter /></Col>
-        </Row>
-      </Container>
-    </>
   )
 }
 
